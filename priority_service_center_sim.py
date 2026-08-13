@@ -136,9 +136,9 @@ class PriorityServiceCenterSim:
             })
 
 
-# ==========================================
+
 # 1. RUN SECTION 4.1 BASELINE SIMULATION (30 REPLICATIONS)
-# ==========================================
+
 def run_baseline_experiment():
     print("Executing 30 Simulation Replications for Section 4.1 Baseline...")
     all_runs = []
@@ -174,9 +174,9 @@ def run_baseline_experiment():
 
     return full_df
 
-# ==========================================
+
 # 2. RUN SECTION 6 CAPACITY PLANNING EXPERIMENTS
-# ==========================================
+
 def run_capacity_planning_experiments():
     print("\n=======================================================")
     print("SECTION 6: CAPACITY PLANNING & STRATEGY EVALUATION")
@@ -211,9 +211,9 @@ def run_capacity_planning_experiments():
 
         print(f"Scenario: {name:35s} | Priority P95: {np.mean(p95_p_runs):5.1f} mins | General P95: {np.mean(p95_g_runs):5.1f} mins")
 
-# ==========================================
+
 # 3. GENERATE SECTION 5 VISUALIZATIONS
-# ==========================================
+
 def generate_visualizations(df):
     print("\nGenerating Report Figures (Saving as PNG images)...")
     plt.style.use('seaborn-v0_8-whitegrid' if 'seaborn-v0_8-whitegrid' in plt.style.available else 'default')
